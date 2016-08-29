@@ -1,0 +1,19 @@
+{
+  "name": "anotherangularapp",
+  "version": "1.0.0",
+  "description": "contacts manager using angularjs and bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "dependencies": {
+	"grunt": "~0.4.1",
+	"grunt-contrib-uglify": "~0.2.0",
+	"grunt-contrib-watch": "~0.5.3"
+	},
+
+
+  "author": "Saqib Saghir",
+  "license": "ISC"
+}

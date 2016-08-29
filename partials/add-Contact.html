@@ -1,0 +1,114 @@
+
+        <div class="page-header" >
+          <h1>Add Contact</h1>
+        </div>
+
+        <div id="alertContainer"></div>
+
+
+
+<form class="form-horizontal" ng-submit="submit()">
+          <div class="row">
+          <div class="col-sm-6">
+            
+                <div class="form-group">
+                  
+                  <label for="name"  class="col-sm-4 control-label">Name</label>
+                  <div class="col-sm-8">
+                  <input type="text"  id="name" class="form-control" ng-model="formInput.name">
+                  </div> <!-- class="col-sm-8" -->
+                </div> <!-- form-group -->    
+
+                <div class="form-group">
+                  <label for="phone number"  class="col-sm-4 control-label">Phone Number</label>
+                  <div class="col-sm-8">
+                  <input type="text"  id="name" class="form-control" ng-model="formInput.phone">
+                  </div> <!-- class="col-sm-8" -->
+                </div> <!-- form-group -->  
+
+
+
+                <div class="form-group" >
+                  <label for="address"  class="col-sm-4 control-label">Address</label>
+                  <div class="col-sm-8">
+                  <input type="text"  id="name" class="form-control" ng-model="formInput.address">
+                  </div> <!-- class="col-sm-8" -->
+                </div> <!-- form-group -->
+              
+            </div>
+          <div class="col-sm-6" >
+            
+              <div class="form-group " >
+                
+                    <label for="Email"  class="col-sm-4 control-label">Email</label>
+                    <div class="col-sm-8">
+                    <input type="email"  id="email" class="form-control" ng-model="formInput.email">
+                    </div> <!-- class="col-sm-8" -->
+                </div>  <!-- form-group --> 
+
+                <div class="form-group" >
+                    <label for="Website"  class="col-sm-4 control-label">Website</label>
+                    <div class="col-sm-8">
+                    <input type="text"  id="website" class="form-control" ng-model="formInput.website">
+                    </div> <!-- class="col-sm-8" -->
+                </div> <!-- form-group -->
+                
+
+                <div class="form-group" >   
+                    <label for="notes"  class="col-sm-4 control-label">Notes</label>
+                    <div class="col-sm-8">
+                    <textarea id="notes" class="form-control" ng-model="contact.notes"
+                    bs-tooltip data-title="Any additional information about the contact." data-trigger="focus" 
+                    data-placement="bottom"></textarea>
+                    </div> <!-- class="col-sm-8" -->
+                  </div> <!-- form-group -->
+
+          </div> <!-- class="col-sm-6" -->
+          </div> <!-- row -->
+
+              <div class="row well">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <input type="submit" class="btn btn-primary col-lg-offset-4" value="Add Contact">
+                </div>
+                <div class="alert alert-success" ng-show="added">
+                    The contact was added successfully.
+                </div>
+            
+              </div> <!-- class="row" -->
+          </form> <!-- class="form-horizontal" -->
+
+<div class="row">
+<div class="table-responsive">
+          
+      <table class="table table-striped ">
+        <thead>
+          <div class="page-header" >
+          <h1>Contact List</h1>
+        </div>
+          <tr>
+            <th>
+            </th>
+          </tr>
+          <tr>
+            <th>Name</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+            <th>Actions</th>
+          </tr>
+
+
+          <tbody >
+              <tr ng-repeat="contact in contacts | filter:{name: search.name} | orderBy:orderProp"> 
+            
+            <td>{{contact.name}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.phone}}</td>
+            <td><a href="#/contact/{{$index}}" class="btn btn-success btn-xs">View Contact</a>
+            <button class="btn btn-danger btn-xs col-sm-offset-1 " ng-click="deleteContact($index)">Delete</button>
+            
+
+          </td>
+          </tr>
+
+          </tbody>          
+  </div> <!-- row -->        

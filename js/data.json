@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Stephen Radford",
+    "phone":"0123456789",
+    "address":"123, Some Street\nLeicester\nGH1 2SR",
+    "email":"stephen@email.com",
+    "website": "stephenradford.me",
+    "notes": ""
+  },
+  {
+    "name":"Alan Border",
+    "phone":"154648445",
+    "address":"457, Some Street\nBirmingham\nLM1 2AB",
+    "email":"stephen@email.com",
+    "website": "alanborder.me",
+    "notes": ""
+  },
+  {
+    "name":"Misbah ul Haq",
+    "phone":"8899556744",
+    "address":"458, Some Street\nFaisalabad\nFD1 2MH",
+    "email":"misbah@email.com",
+    "website": "misbah.me",
+    "notes": ""
+  }
+  ]
